@@ -1,0 +1,77 @@
+#bookShelf {
+    display: flex;
+    // align-items: center;
+    .book_item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+        min-height: 50vh;
+        overflow: auto;
+        &:first-child {
+            border-right: 2px solid black;
+        }
+        #unreadBook {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #readBook {
+            display: flex;
+            flex-direction: column;
+        }
+        .book_container {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px black;
+            background-color: white;
+            .detail_container {
+                h4 {
+                    text-align: center;
+                    margin: 0;
+                }
+                p {
+                    text-align: center;
+                    margin: 7px;
+                }
+            }
+            button {
+                transition: 250ms ease-in;
+            }
+            .green {
+                margin-bottom: 7px;
+                padding: 5px;
+                font-weight: 600;
+                background-color: #66de93;
+                border: 1px solid black;
+                &:hover {
+                    background-color: #50cb93;
+                }
+            }
+            .blue {
+                margin-bottom: 7px;
+                padding: 5px;
+                font-weight: 600;
+                background-color: #39a2db;
+                border: 1px solid black;
+                &:hover {
+                    background-color: #185adb;
+                }
+            }
+            .red {
+                padding: 5px;
+                font-weight: 600;
+                background-color: #ff616d;
+                border: 1px solid black;
+                &:hover {
+                    background-color: #da0037;
+                }
+            }
+        }
+    }
+}

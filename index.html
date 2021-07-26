@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Shelf</title>
+    <link rel="icon" href="assets/images/bookLogo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="dist/main.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="nav_new_book">Tambah Buku Baru</li>
+                <li>
+                    <form action="" id="searchForm">
+                        <input type="text" id="inputSearchBook" />
+                        <input type="submit" value="Cari" id="searchButton" />
+                    </form>
+                </li>
+            </ul>
+        </nav>
+        <img src="assets/images/bookLogo.png" alt="" />
+        <h1>Book Shelf</h1>
+        <div class="user">
+            <p>Hello <span id="userName"></span></p>
+        </div>
+    </header>
+    <div class="overlay" hidden></div>
+    <div class="delete_pop_up">
+        <div class="question_mark">
+            <span>?</span>
+        </div>
+        <p>Benar ingin hapus buku?</p>
+        <p>data tidak dapat dikembalikan</p>
+        <div class="button_container">
+            <button id="confirmButton">Iya</button>
+            <button id="cancelButton">Batal</button>
+        </div>
+    </div>
+    <section class="form_section" hidden>
+        <h2>Tambah Buku Baru</h2>
+        <div class="close_button">
+            <div class="first line"></div>
+            <div class="second line"></div>
+        </div>
+        <form action="" id="inputForm">
+            <div class="input">
+                <label for="inputTitle">Judul</label>
+                <input type="text" id="inputTitle" required />
+            </div>
+            <div class="input">
+                <label for="inputAuthor">Penulis</label>
+                <input type="text" id="inputAuthor" required />
+            </div>
+            <div class="input">
+                <label for="inputYear">Release Year</label>
+                <input type="number" id="inputYear" required />
+            </div>
+            <div class="input_inline">
+                <label for="isCompleted">Selesai dibaca?</label>
+                <input type="checkbox" id="isCompleted" />
+            </div>
+            <input id="bookSubmit" type="submit" value="Submit" />
+        </form>
+    </section>
+    <section id="bookShelf">
+        <div class="book_item">
+            <h2>Belum Selesai</h2>
+            <div id="unreadBook"></div>
+        </div>
+        <div class="book_item">
+            <h2>Sudah selesai</h2>
+            <div id="readBook"></div>
+        </div>
+    </section>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/dom.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
